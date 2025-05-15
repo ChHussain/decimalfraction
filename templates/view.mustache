@@ -1,0 +1,11 @@
+<div class="mod-decimalfraction">
+    <p><strong>Conversion Type:</strong> {{conversiontype}}</p>
+    <p><strong>Question:</strong> {{{questiontext}}}</p>  <!-- Use triple braces to allow HTML if needed -->
+
+    <form method="post">
+        <input type="hidden" name="sesskey" value="{{sesskey}}">
+        <label for="answer">Your Answer:</label>
+        <input type="text" name="answer" id="answer" required>
+        <button type="submit">{{#str}}submitanswer, mod_decimalfraction{{/str}}</button>
+    </form>
+</div>

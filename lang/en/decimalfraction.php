@@ -1,0 +1,42 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * English language pack for mod_decimalfraction
+ *
+ * @package    mod_decimalfraction
+ * @category   string
+ * @copyright  2025 YOUR NAME <your@email.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die();
+
+$string['modulename'] = 'Decimal Fraction';
+$string['modulenameplural'] = 'Decimal Fractions';
+$string['modulename_help'] = 'This activity lets students convert between fractions and decimals.';
+$string['conversiontype'] = 'Conversion Type';
+$string['fractiontodecimal'] = 'Fraction to Decimal';
+$string['decimaltotraction'] = 'Decimal to Fraction';
+$string['questiontext'] = 'Question';
+$string['submitanswer'] = 'Submit Answer';
+$string['pluginname'] = 'Decimal Fraction';
+$string['name'] = 'Decimal Fraction Activity Name';
+$string['decimalfraction:addinstance'] = 'Add a new Decimal Fraction instance';
+$string['conversiontype'] = 'Conversion type';
+$string['conversiontype_help'] = 'Select whether the student should convert a fraction to a decimal or a decimal to a fraction.';
+$string['fractiontodecimal'] = 'Fraction to Decimal';
+$string['decimaltotraction'] = 'Decimal to Fraction';
