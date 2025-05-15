@@ -18,12 +18,11 @@
  * View mod_decimalfraction instance
  *
  * @package    mod_decimalfraction
- * @copyright  2025 YOUR NAME <your@email.com>
+ * @copyright  2025 YOUR NAME
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 require('../../config.php');
-// require_once('locallib.php');
 
 $id = required_param('id', PARAM_INT);
 $cm = get_coursemodule_from_id('decimalfraction', $id, 0, false, MUST_EXIST);
@@ -36,8 +35,48 @@ $PAGE->set_url('/mod/decimalfraction/view.php', ['id' => $id]);
 $PAGE->set_title($decimalfraction->name);
 $PAGE->set_heading($decimalfraction->name);
 
+
+
+function compute_correct_answer($question, $type) {
+    if ($type === 'fraction_to_decimal') {
+        [$numerator, $denominator] = explode('/', str_replace(' ', '', $question));
+        if (is_numeric($numerator) && is_numeric($denominator) && $denominator != 0) {
+            return (string)($numerator / $denominator);
+        }
+    } elseif ($type === 'decimal_to_fraction') {
+        $decimal = floatval($question);
+        if ($decimal == 0.0) return '0/1';
+
+        $precision = 1000000;
+        $numerator = (int)round($decimal * $precision);
+        $denominator = $precision;
+
+        $gcd = simple_gcd($numerator, $denominator);
+
+        return ($numerator / $gcd) . '/' . ($denominator / $gcd);
+    }
+
+    return '';
+}
+
+function simple_gcd($a, $b) {
+    while ($b != 0) {
+        $temp = $b;
+        $b = $a % $b;
+        $a = $temp;
+    }
+    return $a;
+}
+
+$feedback = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && confirm_sesskey()) {
-    $answer = required_param('answer', PARAM_TEXT);
+    $answer = trim(required_param('answer', PARAM_TEXT));
+    $correct = compute_correct_answer($decimalfraction->questiontext, $decimalfraction->conversiontype);
+
+    $iscorrect = trim($answer) === trim($correct);
+
+    // Save the attempt.
     $record = (object)[
         'decimalfractionid' => $decimalfraction->id,
         'userid' => $USER->id,
@@ -45,15 +84,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && confirm_sesskey()) {
         'timecreated' => time()
     ];
     $DB->insert_record('decimalfraction_attempts', $record);
-    redirect($PAGE->url, 'Answer submitted', 2);
+
+    $feedback = $iscorrect
+        ? get_string('correctfeedback', 'mod_decimalfraction')
+        : get_string('incorrectfeedback', 'mod_decimalfraction') . ': ' . $correct;
 }
+
+
+
+
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading($decimalfraction->name);
 
 echo $OUTPUT->render_from_template('mod_decimalfraction/view', [
     'questiontext' => $decimalfraction->questiontext,
+    'conversiontype' => $decimalfraction->conversiontype,
     'sesskey' => sesskey(),
+    'feedback' => $feedback,
 ]);
 
 echo $OUTPUT->footer();

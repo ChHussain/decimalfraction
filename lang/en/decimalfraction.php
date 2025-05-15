@@ -28,15 +28,21 @@ defined('MOODLE_INTERNAL') || die();
 $string['modulename'] = 'Decimal Fraction';
 $string['modulenameplural'] = 'Decimal Fractions';
 $string['modulename_help'] = 'This activity lets students convert between fractions and decimals.';
-$string['conversiontype'] = 'Conversion Type';
-$string['fractiontodecimal'] = 'Fraction to Decimal';
-$string['decimaltotraction'] = 'Decimal to Fraction';
-$string['questiontext'] = 'Question';
-$string['submitanswer'] = 'Submit Answer';
 $string['pluginname'] = 'Decimal Fraction';
+$string['pluginadministration'] = 'Decimal Fraction administration';
+
 $string['name'] = 'Decimal Fraction Activity Name';
 $string['decimalfraction:addinstance'] = 'Add a new Decimal Fraction instance';
+
+$string['questiontext'] = 'Question';
+$string['submitanswer'] = 'Submit Answer';
 $string['conversiontype'] = 'Conversion type';
 $string['conversiontype_help'] = 'Select whether the student should convert a fraction to a decimal or a decimal to a fraction.';
 $string['fractiontodecimal'] = 'Fraction to Decimal';
 $string['decimaltotraction'] = 'Decimal to Fraction';
+
+
+$string['correctfeedback'] = 'Correct! Well done.';
+$string['incorrectfeedback'] = 'Incorrect. Please try again.';
+$string['fraction_to_decimal'] = 'Fraction to Decimal';
+$string['decimal_to_fraction'] = 'Decimal to Fraction';
