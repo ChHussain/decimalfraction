@@ -1,0 +1,60 @@
+# Ignore config and secret files
+config.php
+config-secret.php
+
+# Ignore Moodle data directory (do not store this in git!)
+moodledata/
+
+# Ignore local development and deployment files
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# Ignore node/npm dependencies if using JS tooling
+node_modules/
+npm-debug.log
+
+# Ignore composer dependencies (if using composer)
+vendor/
+composer.lock
+
+# Ignore PHPUnit test results and cache
+phpunit.xml
+phpunit.xml.dist
+phpunit/
+testdataroot/
+build/
+
+# Ignore IDE/project files
+.idea/
+.vscode/
+*.iml
+
+# Ignore backup files
+*.mbz
+
+# Ignore cache/local storage
+cache/
+localcache/
+sessions/
+temp/
+
+# Ignore Git control directories inside submodules or plugins
+*/.git/
+*/.github/
+
+# Ignore any third-party plugin-specific cache or build artifacts
+*/node_modules/
+*/vendor/
+
+# Ignore files used by Docker/local dev environments
+.docker/
+docker-compose.yml
+.env
+
+# Moodle CLI logs
+cli/error.log
+cli/*.log
