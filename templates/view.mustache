@@ -1,0 +1,18 @@
+<div class="mod-decimalfraction">
+    <p><strong>Conversion Type:</strong> {{conversiontype}}</p>
+
+    <form method="post">
+        <input type="hidden" name="sesskey" value="{{sesskey}}">
+
+        {{#questions}}
+          <div class="df-question" style="margin-bottom: 1em;">
+            <p><strong>Question {{index+1}}:</strong> {{{text}}}</p>
+            <label for="answer{{index}}">Your Answer:</label>
+            <input type="text" name="answer[{{index}}]" id="answer{{index}}" required>
+            {{#feedback}}<div class="alert alert-info" style="margin-top:5px;">{{feedback}}</div>{{/feedback}}
+          </div>
+        {{/questions}}
+
+        <button type="submit">{{#str}}submitanswer, mod_decimalfraction{{/str}}</button>
+    </form>
+</div>
