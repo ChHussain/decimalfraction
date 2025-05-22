@@ -15,15 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Callback implementations for mod_decimalfraction
- *
- * Documentation: {@link https://moodledev.io/docs/apis/plugintypes/mod}
+ * View mod_decimalfraction instance
  *
  * @package    mod_decimalfraction
- * @copyright  2025 YOUR NAME <your@email.com>
+ * @copyright  2025 hussain shafiq
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
  
 
 

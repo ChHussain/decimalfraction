@@ -15,14 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * English language pack for mod_decimalfraction
+ * View mod_decimalfraction instance
  *
  * @package    mod_decimalfraction
- * @category   string
- * @copyright  2025 YOUR NAME <your@email.com>
+ * @copyright  2025 hussain shafiq
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'Decimal Fraction';

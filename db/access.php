@@ -15,16 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Capability definitions for mod_decimalfraction
- *
- * Documentation: {@link https://moodledev.io/docs/apis/subsystems/access}
+ * View mod_decimalfraction instance
  *
  * @package    mod_decimalfraction
- * @category   access
- * @copyright  2025 YOUR NAME <your@email.com>
+ * @copyright  2025 hussain shafiq
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 
 defined('MOODLE_INTERNAL') || die();
 

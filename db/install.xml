@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <XMLDB PATH="mod/decimalfraction/db" VERSION="2025051500" COMMENT="DB schema for decimalfraction">
     <TABLES>
-
+   /// The XMLDB structure for the Decimal to Fraction activity
         <TABLE NAME="decimalfraction" COMMENT="Main table for Decimal to Fraction activity">
             <FIELDS>
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key"/>
