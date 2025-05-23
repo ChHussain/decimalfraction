@@ -38,9 +38,13 @@ $string['conversiontype'] = 'Conversion type';
 $string['conversiontype_help'] = 'Select whether the student should convert a fraction to a decimal or a decimal to a fraction.';
 $string['fractiontodecimal'] = 'Fraction to Decimal';
 $string['decimaltotraction'] = 'Decimal to Fraction';
-
-
 $string['correctfeedback'] = 'Correct! Well done.';
-$string['incorrectfeedback'] = 'Incorrect. Please try again.';
+$string['incorrectfeedback'] = 'Incorrect. Please try again Correct answer';
 $string['fraction_to_decimal'] = 'Fraction to Decimal';
 $string['decimal_to_fraction'] = 'Decimal to Fraction';
+$string['numofquestions'] = "Number of questions";
+$string['numofquestions_help'] = "Select the number of questions to be generated for this activity.";
+$string['questionmode'] = 'Question Mode';
+$string['random'] = 'Random';   
+$string['manual'] = 'Manual';
+$string['showanswer'] = 'Show Answer';

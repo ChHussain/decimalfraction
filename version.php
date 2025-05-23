@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information for mod_decimalfraction
+ * View mod_decimalfraction instance
  *
  * @package    mod_decimalfraction
- * @copyright  2025 YOUR NAME <your@email.com>
+ * @copyright  2025 hussain shafiq
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component    = 'mod_decimalfraction';
 $plugin->release      = '1.0';
-$plugin->version      = 2025051501;
+$plugin->version      = 20250515013;
 $plugin->requires     = 2024100700;
 $plugin->supported    = [405, 500];
 $plugin->maturity     = MATURITY_STABLE;
