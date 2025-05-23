@@ -1,0 +1,42 @@
+<div class="mod-decimalfraction">
+    <p><strong>Conversion Type:</strong> {{conversiontype}}</p>
+
+    <form method="post">
+        <input type="hidden" name="sesskey" value="{{sesskey}}">
+
+        {{#questions}}
+            <div class="df-question" style="margin-bottom: 1em;">
+                <p><strong>Question {{index+1}}:</strong> {{{text}}}</p>
+                {{#cansubmit}}
+                    <label for="answer{{index}}">Your Answer:</label>
+                    <input type="text" name="answer[{{index}}]" id="answer{{index}}" required>
+                  
+                {{/cansubmit}}
+                {{#showanswer}}
+                   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#answer{{index}}">
+                        {{#str}}showanswer, mod_decimalfraction{{/str}}
+                    </button>
+                    <div id="answer{{index}}" class="collapse">
+                        <div class="alert alert-warning" style="margin-top:5px;">
+                            <strong>Correct answer:</strong> {{correct}}
+                        </div>
+                    </div>
+                {{/showanswer}}
+                {{#feedback}}
+                    <div class="alert alert-info" style="margin-top:5px;">{{feedback}}</div>
+                {{/feedback}}
+            </div>
+        {{/questions}}
+
+        {{^all_attempts_used}}
+            <!-- Show main submit button only if at least one question can still be answered -->
+            <button type="submit">{{#str}}submitanswer, mod_decimalfraction{{/str}}</button>
+        {{/all_attempts_used}}
+
+        {{#all_attempts_used}}
+            <div class="alert alert-success" style="margin-top:15px;">
+                <strong>All questions attempted. Your grade: {{grade}}%</strong>
+            </div>
+        {{/all_attempts_used}}
+    </form>
+</div>
